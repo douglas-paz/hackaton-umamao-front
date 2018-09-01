@@ -1,7 +1,8 @@
 .light_button{
   background: none;
-  color: black;
+  color: #1d2633;
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -62,6 +63,10 @@ p, button {
 .not_register {
   display: flex;
   justify-content: center;
+  margin-top: 3.0rem;
+}
+
+.margin_top{
   margin-top: 3.0rem;
 }
 
