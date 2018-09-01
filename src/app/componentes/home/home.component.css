@@ -1,0 +1,87 @@
+.logo {
+  width: 100%;
+  height: auto;
+}
+p, button {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: initial;
+}
+
+.logo_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.c_body {
+  background: linear-gradient(90deg, #ff5370, #f15f22);
+}
+
+.login_text {
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-top: 2.0rem;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+}
+
+.form-group_user {
+  margin-bottom: 0.4rem;
+}
+
+.form-group input {
+  background: transparent;
+  border: 1.5px solid white;
+  border-radius: 15px;
+}
+
+.form-group .btn {
+  background-color: #1d2633;
+  color: white;
+  border: 2px solid #1d2633;
+  border-radius: 7px;
+  width: 65%;
+  margin: 0 auto;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.not_register {
+  display: flex;
+  justify-content: center;
+  margin-top: 3.0rem;
+}
+
+.not_register p {
+  color: white;
+  font-size: 12px;
+  margin-bottom: 0.3rem;
+}
+
+.link_login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.3rem;
+}
+
+.link_login a{
+  color: #1d2633;
+  /* text-decoration: underline; */
+  border-bottom: 1.5px solid #1d2633;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.btn {
+  /* font-weight: bold; */
+}
