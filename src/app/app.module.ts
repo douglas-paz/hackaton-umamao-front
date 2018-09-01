@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutModule } from './modules/layout/layout.module';
+import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './componentes/home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
@@ -12,6 +13,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     LoginComponent,
+    RegisterComponent,
     HomeComponent
   ],
   imports: [

@@ -19,13 +19,17 @@ p, button {
     justify-content: center;
 }
 
+.form-control {
+    height: 2.0rem;
+}
+
 .c_body {
     background: linear-gradient(90deg, #ff5370, #f15f22);
     height: 100%;
 }
 
-.login_text {
-    font-size: 12px;
+.register_text {
+    font-size: 14px;
     color: white;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -38,28 +42,25 @@ p, button {
 }
 
 .form-group_user {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
 }
 
 .form-group input {
     background: transparent;
     border: 1.5px solid white;
-    border-radius: 15px;
+    border-radius: 9px;
 }
 
-.form-group .btn {
-    background-color: #1d2633;
-    color: white;
-    border: 2px solid #1d2633;
-    border-radius: 7px;
-    width: 65%;
-    margin: 0 auto;
-}
-
-::-webkit-input-placeholder {
+::-webkit-input-placeholder, .photo_text  {
     color: white;
     font-size: 13px;
     font-style: italic;
+  }
+
+  .photo_text {
+      font-style: normal;
+      text-align: center;
+      margin-bottom: 1.9rem;
   }
 
   .not_register {
@@ -74,16 +75,16 @@ p, button {
       margin-bottom: 0.3rem;
   }
 
-  .link_login {
+  .continue_link {
     display: flex;
     justify-content: center;
     margin-bottom: 0.3rem;
+    margin-top: 0.5rem;
   }
 
-  .link_login a{
+  .continue_link a{
       color: #1d2633;
       /* text-decoration: underline; */
-      border-bottom: 1.5px solid #1d2633;
       font-weight: bold;
       font-size: 16px;
   }
