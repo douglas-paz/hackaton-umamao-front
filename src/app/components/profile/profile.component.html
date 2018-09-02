@@ -12,14 +12,14 @@
   <div class="separation"></div>
   <div class="container c_body_profile">
     <div class="row justify-content-center">
-      <p class="profile_name">Letícia Silva</p>
+      <p class="profile_name">{{ user.name }}</p>
       <i class="fa fa-pencil" aria-hidden="true"></i>
     </div>
     <div class="row justify-content-center">
       <p class="profile_rank">N O V A T O</p>
     </div>
     <div class="row justify-content-center">
-      <p class="profile_mention">@ Itú Sabará</p>
+      <p class="profile_mention">@ {{ user.neighborhood }}</p>
     </div>
     <div class="row justify-content-center">
       <button class="profile_add">Adicionar atividade</button>

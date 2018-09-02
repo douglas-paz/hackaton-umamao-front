@@ -44,8 +44,10 @@ export class LoginComponent implements OnInit {
       .subscribe(resp => {
         this.user = resp;
         console.log(resp);
-        if (resp)
+        if (resp) {
           this.router.navigate(['profile']);
+          localStorage.setItem('currentUser', JSON.stringify(resp));
+        }
         else {
           this.loading = false;
           this.error = "Usuario ou senha errados";

@@ -8,6 +8,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { PostagensComponent } from './components/postagens/postagens.component';
 import { SideBarComponent } from './modules/shared/side-bar/side-bar.component';
+import { SolicitationComponent } from './components/solicitation/solicitation.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'menu',
     component: SideBarComponent
+  },
+  {
+    path: 'solicitation',
+    component: SolicitationComponent
   },
   {
     path: '**',

@@ -3,7 +3,7 @@ export class User {
     public birthday: Date;
     public phone: string;
     public email: string;
-    public localization: string;
+    public neighborhood: string;
     public photo: string;
     public username: string;
     public password: string;

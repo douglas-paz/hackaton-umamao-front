@@ -18,6 +18,8 @@ import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
 import { DataService } from './services/data.service';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SharedModule } from './modules/shared/shared.module';
+import { SolicitationComponent } from './components/solicitation/solicitation.component';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
 
 const JWT_Module_Options: JwtModuleOptions = {
   config: {
@@ -35,7 +37,9 @@ const JWT_Module_Options: JwtModuleOptions = {
     HomeComponent,
     ProfileComponent,
     PostagensComponent,
-    NavBarComponent
+    NavBarComponent,
+    SolicitationComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,

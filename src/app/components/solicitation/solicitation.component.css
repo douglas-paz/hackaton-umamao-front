@@ -1,0 +1,101 @@
+.body_wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+p, button, a {
+    font-family: 'Nunito', sans-serif;
+}
+
+.fa-bars {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 100;
+    padding-top: 0.5rem;
+}
+
+.c_header_profile {
+    background: linear-gradient(90deg, #ff5370, #f15f22);
+    height: 8%;
+    padding-right: 0;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    color: white;
+    font-weight: 100;
+    padding-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.engrenagem {
+    width: auto;
+    height: 2.8rem;
+    margin-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.fa-chevron-left {
+    margin-top: 1.0rem;
+    margin-left: 1.0rem;
+    color: #6b6769;
+    font-size: 1.5rem;
+}
+
+.main_photo {
+    min-width: 96%;
+    max-width: 96%;
+    height: 16.5rem;
+    margin-top: 0.7rem;
+}
+
+.profile_photo {
+    position: absolute;
+    top: 315px;
+    width: 5.5rem;
+    height: 5.5rem;
+    left: 30px;
+}
+
+.profile {
+    margin-left: 7.30rem;
+}
+
+.profile_name {
+    color: #1d2633;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-top: 0.3rem;
+    margin-bottom: 0px;
+}
+
+.profile_rank {
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+    color: #1d2633;
+}
+
+.help_title {
+    font-weight: bold;
+    font-size: 1.0rem;
+}
+
+.help_text {
+    font-size: 0.8rem;
+}
+
+.icons img {
+    max-height: 1.5rem;
+    min-height: 1rem;
+}
+
+.botao {
+    background: #ee3438;
+    color: white;
+    font-size: 1.2rem;
+    padding: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid #ee3438;
+    border-radius: 7px;
+}

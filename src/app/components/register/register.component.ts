@@ -25,13 +25,12 @@ export class RegisterComponent implements OnInit {
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],
       birthday: ['', Validators.required],
-      phone: ['', Validators.required],
+      cpf: ['', Validators.required],
       email: ['', Validators.required],
-      localization: ['', Validators.required],
-      photo: ['', Validators.required],
+      phone: ['', Validators.required],
+      neighborhood: ['', Validators.required],
       username: ['', Validators.required],
-      password: ['', Validators.required],
-      cpf: ['', Validators.required]
+      password: ['', Validators.required]
     });
   }
 
@@ -40,9 +39,9 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     // stop here if form is invalid
-    // if (this.registerForm.invalid) {
-    //   return;
-    // }
+    if (this.registerForm.invalid) {
+      return;
+    }
 
     this.loading = true;
 
@@ -50,10 +49,11 @@ export class RegisterComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          console.log(data);
+          localStorage.setItem('currentUser', JSON.stringify(this.registerForm.value));
           this.router.navigate(['/profile']);
         },
         error => {
+          console.log(error);
           this.loading = false;
           this.submitted = false;
         });
