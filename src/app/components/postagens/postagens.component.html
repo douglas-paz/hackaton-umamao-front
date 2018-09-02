@@ -1,9 +1,17 @@
-<div *ngFor="let postagem of postagens">
-  <p>{{postagem.conclusion_status}}</p>
-  <p>{{postagem.date}}</p>
-  <p>{{postagem.description}}</p>
-  <img [src]="postagem.photo" >
-  <p>{{postagem.photo}}</p>
-  <p>{{postagem.post_id}}</p>
-  <p>{{postagem.title}}</p>
+<app-nav-bar></app-nav-bar>
+<div class="font_nunito margin_All">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,800" rel="stylesheet">
+  <a href="/postagem/id?={{tipoAcao}}" class="btn btn_ajudar">{{textoAcao}}</a>
+  <div *ngFor="let postagem of postagens" >
+    <div class="row">
+      <div class="col-6">
+        <img class="card-img-top" [src]="postagem.photo">
+      </div>
+      <div class="col-6">
+        <h2 class="h2_nunito">{{postagem.title}}</h2>
+        <p>{{postagem.description}}</p>
+        <a href="/postagem/id?={{postagem.post_id}}" class="btn btn_ajudar">{{textoAcao}}</a>
+      </div>
+    </div>
+  </div>
 </div>
