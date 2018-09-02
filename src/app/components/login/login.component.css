@@ -1,6 +1,7 @@
 .body_wrapper {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    background: linear-gradient(90deg, #ff5370, #f15f22);
 }
 
 p, button {
@@ -20,7 +21,6 @@ p, button {
 }
 
 .c_body {
-    background: linear-gradient(90deg, #ff5370, #f15f22);
     height: 100%;
 }
 

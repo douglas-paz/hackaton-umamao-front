@@ -1,6 +1,11 @@
+body {
+    overflow: hidden;
+}
+
 .body_wrapper {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    background: linear-gradient(90deg, #ff5370, #f15f22);
 }
 
 p, button {
@@ -24,8 +29,7 @@ p, button {
 }
 
 .c_body {
-    background: linear-gradient(90deg, #ff5370, #f15f22);
-    height: 100%;
+    max-height: 20%;
 }
 
 .register_text {
@@ -39,16 +43,18 @@ p, button {
 .form-group {
     display: flex;
     justify-content: center;
+    margin-bottom: 0.5rem;
 }
 
-.form-group_user {
-    margin-bottom: 0.2rem;
+.form-group:first-child {
+    margin-top: 2.5rem;
 }
 
 .form-group input {
     background: transparent;
     border: 1.5px solid white;
     border-radius: 9px;
+    height: 2.3rem;
 }
 
 ::-webkit-input-placeholder, .photo_text  {
@@ -63,28 +69,16 @@ p, button {
       margin-bottom: 1.9rem;
   }
 
-  .not_register {
-    display: flex;
-    justify-content: center;
-    margin-top: 3.0rem;
-  }
-
-  .not_register p {
-      color: white;
-      font-size: 12px;
-      margin-bottom: 0.3rem;
-  }
 
   .continue_link {
     display: flex;
     justify-content: center;
     margin-bottom: 0.3rem;
-    margin-top: 0.5rem;
+    margin-top: 1.2rem;
   }
 
   .continue_link a{
       color: #1d2633;
-      /* text-decoration: underline; */
       font-weight: bold;
       font-size: 1.3rem;
     }
@@ -93,5 +87,7 @@ p, button {
 .fa-arrow-right {
     font-size: 1.7rem;
     font-weight: 100;
+    padding-top: 0.1rem;
+    padding-left: 0.4rem;
 }
   
