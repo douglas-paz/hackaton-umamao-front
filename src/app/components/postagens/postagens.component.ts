@@ -11,6 +11,7 @@ import {Postagem} from '../../models/postagem.model';
 export class PostagensComponent implements OnInit {
 
   public postagens: Array<Postagem>;
+  public textoAcao = 'Dar uma mão';
 
   constructor(
     private postagemServices: PostagemService
