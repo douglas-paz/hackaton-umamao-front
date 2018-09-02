@@ -19,32 +19,32 @@ export class HeaderComponent implements OnInit {
     this.auth();
     this.menu = [
       {
-        link: "",
-        name: "Home"
+        link: '',
+        name: 'Home'
       },
       {
-        link: "about",
-        name: "About"
+        link: 'about',
+        name: 'About'
       }
-    ]
+    ];
     this.menuNormal = [
         {
-          link: "",
-          name: "Home"
+          link: '',
+          name: 'Home'
         },
         {
-          link: "about",
-          name: "About"
+          link: 'about',
+          name: 'About'
         },
         {
-          link: "login",
-          name: "Login"
+          link: 'login',
+          name: 'Login'
         },
         {
-          link: "signup",
-          name: "Sign Up"
+          link: 'signup',
+          name: 'Sign Up'
         }
-      ]
+      ];
   }
 
   toggleMenu() {
@@ -53,7 +53,7 @@ export class HeaderComponent implements OnInit {
   }
 
   modeToggleSwitch() {
-    this.darkModeActive = !this.darkModeActive
+    this.darkModeActive = !this.darkModeActive;
   }
 
   logout() {

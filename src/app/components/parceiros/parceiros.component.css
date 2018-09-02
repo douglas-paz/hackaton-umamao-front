@@ -1,0 +1,29 @@
+.h2_nunito{
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.row{
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.btn_ajudar{
+  font-weight: bold;
+  background-color: #f15f22;
+  font-size: 1.3rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  border-radius: 8px;
+}
+.font_nunito{
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2rem;
+}
+.margin_All{
+  margin: 1.5rem;
+  max-height: 100%;
+}

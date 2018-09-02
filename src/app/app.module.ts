@@ -20,6 +20,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { SolicitationComponent } from './components/solicitation/solicitation.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
+import {ParceirosComponent} from './components/parceiros/parceiros.component';
+import {SideBarComponent} from './modules/shared/side-bar/side-bar.component';
 
 const JWT_Module_Options: JwtModuleOptions = {
   config: {
@@ -39,7 +41,9 @@ const JWT_Module_Options: JwtModuleOptions = {
     PostagensComponent,
     NavBarComponent,
     SolicitationComponent,
-    PopUpComponent
+    PopUpComponent,
+    NavBarComponent,
+    ParceirosComponent
   ],
   imports: [
     BrowserModule,

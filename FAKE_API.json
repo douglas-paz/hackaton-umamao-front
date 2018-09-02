@@ -37,6 +37,17 @@
       "post_id": 1
     }
   ],
+  "parceiros": [
+    {
+      "date": "01/09/2018",
+      "local": "Sicredi Digital",
+      "title": "Hackatona social",
+      "description": "MaMão bombando",
+      "photo": "../assets/img/postagem1.jpg",
+      "post_id": 1,
+      "phone": "(51) 123-123-123"
+    }
+  ],
   "users": [
     {
       "username" : "leonardo",

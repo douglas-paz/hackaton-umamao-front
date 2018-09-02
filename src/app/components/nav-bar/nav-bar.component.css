@@ -1,0 +1,18 @@
+.custom_navbar{
+  background: linear-gradient(90deg, #ff5370, #f15f22);
+}
+
+.custom_navbar_brand{
+  max-width: 5rem;
+}
+
+.fa_white{
+  color: white;
+  size: 30rem;
+}
+
+.light_button{
+  background: none;
+  color: white;
+  font-size: 2.5rem;
+}

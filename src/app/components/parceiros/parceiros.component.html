@@ -1,0 +1,22 @@
+<div class="row" *ngIf="sideBar; fechaMenu">
+  <div class="font_nunito margin_All">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800" rel="stylesheet">
+    <div *ngFor="let parceiro of parceiros" >
+      <div class="row">
+        <div class="col-6">
+          <img class="card-img-top" [src]="parceiro.photo">
+        </div>
+        <div class="col-6">
+          <h2 class="h2_nunito">{{parceiro.title}}</h2>
+          <p>{{parceiro.description}}</p>
+          <a href="/postagem/id?={{parceiro.post_id}}" class="btn btn_ajudar">{{textoAcao}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #fechaMenu>
+  <div class="row">
+
+  </div>
+</ng-template>
