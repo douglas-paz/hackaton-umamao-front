@@ -1,3 +1,38 @@
-<p>
-  side-bar works!
-</p>
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<div class="menu_wrapper">
+  <div class="container c_menu">
+    <div class="row">
+      <img class="engrenagem" src="../../../../assets/img/engrenagem.png">
+      <i class="fa fa-bars"></i>
+    </div>
+    <div class="row justify-content-center">
+      <img class="profile_image" src="../../../../assets/img/foto-menuhamburguer.png">
+    </div>
+    <div class="row justify-content-center">
+        <p class="profile_name">Letícia Silva</p>
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </div>
+      <div class="row justify-content-center">
+        <p class="profile_rank">N O V A T O</p>
+      </div>
+      <div class="row justify-content-center">
+        <p class="profile_mention">@ Itú Sabará</p>
+      </div>
+      <div class="break_line"></div>
+      <ul class="navbar-nav">
+        <li *ngFor="let page of menu" class="nav-item">
+          <div class="row">
+            <a  (click)="toggleMenu()" class="nav-link pointer" routerLink="{{ page.link }}"> <img src="{{ page.icon }}"class="menu_icon"></a>
+            <a  (click)="toggleMenu()" class="nav-link menu_name" routerLink="{{ page.link }}"> {{ page.name }}</a>
+          </div>
+        </li>
+      </ul>
+      <div class="row">
+        <div class="col">
+          <div class="float-right">
+              <img class="logo_image" src="../../../../assets/img/umamamaobrancomenuhamburguer.png">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

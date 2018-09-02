@@ -1,0 +1,108 @@
+body {
+    overflow: hidden;
+}
+
+.menu_wrapper {
+    min-height: 100%;
+    min-width: 65%;
+    max-width: 65%;
+    background: linear-gradient(90deg, #ff5370, #f15f22);
+}
+
+p, button, a {
+    font-family: 'Nunito', sans-serif;
+}
+
+.engrenagem {
+    max-width: 1.8rem;
+    max-height: 1.8rem;
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.fa-bars {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 100;
+    padding-top: 0.5rem;
+    margin-left: 11rem;
+}
+
+.profile_image {
+    height: 6.5rem;
+    width: 6.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.0rem;
+}
+
+.profile_name {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    margin-left: 0.2rem;
+    height: 0.8rem;
+}
+
+.fa-pencil {
+    color: white;
+    margin-left: 0.2rem;
+    margin-top: 0.3rem;
+}
+
+.profile_rank {
+    color: white;
+    letter-spacing: 0.02rem;
+    font-size: 0.8rem;
+    font-weight: 1000;
+    height: 0.2rem;
+}
+
+.profile_mention {
+    color: white;
+    letter-spacing: 0.02rem;
+    font-size: 0.8rem;
+    font-weight: 1000;
+    height: 0.2rem;
+}
+
+.break_line::after {
+    content:"";
+    display: block;
+    height: 1px;
+    width: 13rem;
+    margin: 5px auto 10px auto;
+    background-color: #fff;
+    margin-top: 1.8rem;
+}
+
+
+.menu_icon:first-child {
+    margin-top: 10px;
+}
+
+.nav-item {
+    margin-left: 1.2rem;
+}
+
+.nav-item a {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.navbar-nav img {
+    width: 1.5rem;
+    height: auto;
+}
+.menu_name {
+    margin-top: 1.0rem;
+    margin-left: 0.8rem;
+}
+
+.logo_image {
+    width: 30%;
+    height: 30%;
+    margin-left: 9rem;
+}

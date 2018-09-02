@@ -17,6 +17,7 @@ import { AuthGuardService as AuthGuard } from './auth/auth-guard.service';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
 import { DataService } from './services/data.service';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SharedModule } from './modules/shared/shared.module';
 
 const JWT_Module_Options: JwtModuleOptions = {
   config: {
@@ -44,7 +45,8 @@ const JWT_Module_Options: JwtModuleOptions = {
     ReactiveFormsModule,
     JwtModule.forRoot(JWT_Module_Options),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [
     AuthGuard,

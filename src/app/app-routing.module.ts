@@ -7,6 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { PostagensComponent } from './components/postagens/postagens.component';
+import { SideBarComponent } from './modules/shared/side-bar/side-bar.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   },
   {
     path: 'postagens', component: PostagensComponent
+  },
+  {
+    path: 'menu',
+    component: SideBarComponent
   },
   {
     path: '**',
