@@ -11,7 +11,7 @@ import { Postagem } from '../../models/postagem.model';
 })
 export class PostagensProfileComponent implements OnInit {
 
-  public postagens: Array<Postagem>;
+  public postagens: Object;
   public textoAcao = 'Dar uma mão';
   public tipoAcao = 'AJUDAR';
 

@@ -10,7 +10,7 @@ import {Postagem} from '../../models/postagem.model';
 })
 export class PostagensComponent implements OnInit {
 
-  public postagens: Array<Postagem>;
+  public postagens: Object;
   public textoAcao = 'Dar uma mão';
   public tipoAcao = 'AJUDAR';
 
