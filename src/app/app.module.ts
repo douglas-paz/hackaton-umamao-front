@@ -8,13 +8,15 @@ import { LayoutModule } from './modules/layout/layout.module';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './componentes/home/home.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
