@@ -11,6 +11,7 @@ import { PostagensComponent } from './components/postagens/postagens.component';
 import { SideBarComponent } from './modules/shared/side-bar/side-bar.component';
 import { SolicitationComponent } from './components/solicitation/solicitation.component';
 import { AuthLoggedService } from './auth/auth-logged.service';
+import {ParceirosComponent} from './components/parceiros/parceiros.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,9 @@ const routes: Routes = [
   },
   {
     path: 'postagens', component: PostagensComponent
+  },
+  {
+    path: 'parceiros', component: ParceirosComponent
   },
   {
     path: 'menu',

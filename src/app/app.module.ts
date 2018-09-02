@@ -22,6 +22,8 @@ import { SolicitationComponent } from './components/solicitation/solicitation.co
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { RegisterEventComponent } from './components/register-event/register-event.component';
 import { PostagensProfileComponent } from './components/postagens-profile/postagens-profile.component';
+import {ParceirosComponent} from './components/parceiros/parceiros.component';
+import {SideBarComponent} from './modules/shared/side-bar/side-bar.component';
 
 const JWT_Module_Options: JwtModuleOptions = {
   config: {
@@ -43,7 +45,9 @@ const JWT_Module_Options: JwtModuleOptions = {
     SolicitationComponent,
     PopUpComponent,
     RegisterEventComponent,
-    PostagensProfileComponent
+    PostagensProfileComponent,
+    NavBarComponent,
+    ParceirosComponent
   ],
   imports: [
     BrowserModule,

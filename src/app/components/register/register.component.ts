@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   loading = false;
   submitted = false;
   alertService: any;
-  
+
   constructor(
     private formBuilder: FormBuilder,
     private dataService: DataService,
