@@ -1,27 +1,37 @@
+import { AuthService } from './auth/auth.service';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 const routes: Routes = [
   { 
     path: '' , component: HomeComponent,
   },
   {
-    path: 'register' , component : RegisterComponent,
+    path: 'register' , 
+    component : RegisterComponent
   },
   {
     path: 'login', component: LoginComponent
   },
   {
-    path: 'profile', component: ProfileComponent
+    path: 'profile', 
+    component: ProfileComponent,
+    canActivate: [AuthGuardService]
+  },
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [ RouterModule ]
+  exports: [ RouterModule ],
+  providers: [ AuthGuardService, AuthService ]
 })
 export class AppRoutingModule { }

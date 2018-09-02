@@ -7,8 +7,19 @@ import { LoginComponent } from './components/login/login.component';
 import { LayoutModule } from './modules/layout/layout.module';
 import { RegisterComponent } from './components/register/register.component';
 import { HomeComponent } from './componentes/home/home.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
+
+import { AuthGuardService as AuthGuard } from './auth/auth-guard.service';
+import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
+
+const JWT_Module_Options: JwtModuleOptions = {
+  config: {
+    tokenGetter: () => {
+      return localStorage.getItem('access_token');
+    }
+  }
+};
 
 @NgModule({
   declarations: [
@@ -23,9 +34,10 @@ import { ProfileComponent } from './components/profile/profile.component';
     AppRoutingModule,
     LayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    JwtModule.forRoot(JWT_Module_Options)
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
