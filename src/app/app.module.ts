@@ -10,10 +10,12 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PostagensComponent } from './components/postagens/postagens.component';
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AuthGuardService as AuthGuard } from './auth/auth-guard.service';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
+import { DataService } from './services/data.service';
 
 const JWT_Module_Options: JwtModuleOptions = {
   config: {
@@ -39,9 +41,13 @@ const JWT_Module_Options: JwtModuleOptions = {
     FormsModule,
     ReactiveFormsModule,
     JwtModule.forRoot(JWT_Module_Options),
-    HttpModule
+    HttpModule,
+    HttpClientModule
   ],
-  providers: [AuthGuard],
+  providers: [
+    AuthGuard,
+    DataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

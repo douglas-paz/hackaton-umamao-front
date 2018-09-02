@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {Http} from '@angular/http';
-import {Postagem} from '../models/postagem.model';
-import {environment} from '../environments';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Postagem } from '../models/postagem.model';
+import { environment } from '../environments';
 
 @Injectable()
 export class PostagemService {

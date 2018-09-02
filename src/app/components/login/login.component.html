@@ -11,7 +11,7 @@
     <div class="row justify-content-center">
         <div class="col-10">
           <p class="login_text">Já possui uma conta? Faça login.</p>
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <form [formGroup]="loginForm" #formDirective="ngForm" (ngSubmit)="onSubmit()">
               <div class="form-group form-group_user">
                   <input type="text" placeholder="USUÁRIO" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
                   <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="row justify-content-center"><div class="col-8 not_register"><p>Ainda não possui conta?</p></div></div>
-    <div class="row justify-content-center"><div class="col-10 link_login"><a href="">CRIAR CONTA</a></div></div>
+    <div class="row justify-content-center"><div class="col-10 link_login"><a [routerLink]="['/signup']">CRIAR CONTA</a></div></div>
     <div class="row justify-content-center"><div class="col-10 link_login"><a href="">ENTRAR COM O FACEBOOK</a></div></div>
   </div>
 </div>

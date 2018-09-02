@@ -77,10 +77,12 @@ p, button {
     margin-top: 1.2rem;
   }
 
-  .continue_link a{
+  .continue_link button{
       color: #1d2633;
       font-weight: bold;
       font-size: 1.3rem;
+      background:none;
+      border: none;
     }
 
 
