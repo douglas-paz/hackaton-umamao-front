@@ -10,7 +10,9 @@ export class AuthService {
     // const token = localStorage.getItem('token');
     // Check whether the token is expired and return
     // true or false
-    return true;
+    if (localStorage.getItem('currentUser'))
+      return true;
+    return false;
     // return !this.jwtHelper.isTokenExpired(token);
   }
 }

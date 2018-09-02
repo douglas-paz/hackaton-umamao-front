@@ -6,7 +6,7 @@
       <i (click)="toggleMenu()"class="fa fa-bars"></i>
     </div>
     <div class="row justify-content-center">
-      <img class="profile_image" src="../../../../assets/img/foto-menuhamburguer.png">
+      <img routerLink="['/profile']" class="profile_image" src="../../../../assets/img/foto-menuhamburguer.png">
     </div>
     <div class="row justify-content-center">
         <p class="profile_name">Letícia Silva</p>
@@ -25,6 +25,9 @@
             <a  (click)="toggleMenu()" class="nav-link pointer" routerLink="{{ page.link }}"> <img src="{{ page.icon }}"class="menu_icon"></a>
             <a  (click)="toggleMenu()" class="nav-link menu_name" routerLink="{{ page.link }}"> {{ page.name }}</a>
           </div>
+        </li>
+        <li class="nav-item">
+          <a  (click)="logout()" class="nav-link pointer logout">Logout</a>
         </li>
       </ul>
       <div class="row">

@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solicitation.component.css']
 })
 export class SolicitationComponent implements OnInit {
+  showMenu = false;
+  popup = false;
 
   constructor() { }
 
   ngOnInit() {
+
   }
 
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+  }
+
+  showPopUp() {
+    this.popup = !this.popup;
+  }
 }

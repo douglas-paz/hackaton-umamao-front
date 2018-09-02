@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-side-bar',
@@ -8,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class SideBarComponent implements OnInit {
   menu: Object;
   showMenu = false;
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.menu = [
@@ -42,6 +45,11 @@ export class SideBarComponent implements OnInit {
 
   toggleMenu() {
     document.getElementById('side-menu').style.display = 'none'
+  }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['/login']);
   }
 
 }

@@ -1,3 +1,4 @@
+import { PostagensProfileComponent } from './components/postagens-profile/postagens-profile.component';
 import { RegisterEventComponent } from './components/register-event/register-event.component';
 import { AuthService } from './auth/auth.service';
 import { NgModule } from '@angular/core';
@@ -33,7 +34,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   {
-    path: 'postagens', component: PostagensComponent
+    path: 'postagens', component: PostagensProfileComponent
   },
   {
     path: 'parceiros', component: ParceirosComponent
@@ -45,10 +46,6 @@ const routes: Routes = [
   {
     path: 'solicitation',
     component: SolicitationComponent
-  },
-  {
-    path: 'event',
-    component: RegisterEventComponent
   },
   {
     path: '**',

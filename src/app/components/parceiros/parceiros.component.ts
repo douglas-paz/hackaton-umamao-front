@@ -20,7 +20,6 @@ export class ParceirosComponent implements OnInit {
 
   ngOnInit() {
     this.parceiroServices.getParceiros().then((response) => {
-      console.log(response);
       this.parceiros = response;
     }).catch((erro) => {
       console.log(erro);

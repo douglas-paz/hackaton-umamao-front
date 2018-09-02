@@ -16,7 +16,6 @@ export class ProfileComponent implements OnInit {
   }
 
   toggleMenu() {
-    console.log(this.showMenu);
     this.showMenu = !this.showMenu;
   }
 

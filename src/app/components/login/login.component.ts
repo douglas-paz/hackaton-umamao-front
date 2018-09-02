@@ -43,7 +43,6 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(resp => {
         this.user = resp;
-        console.log(resp);
         if (resp) {
           this.router.navigate(['profile']);
           localStorage.setItem('currentUser', JSON.stringify(resp));
