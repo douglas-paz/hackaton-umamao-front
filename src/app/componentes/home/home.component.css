@@ -18,8 +18,8 @@ p, button {
 
 .body_wrapper{
   background: linear-gradient(90deg, #ff5370, #f15f22);
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .login_text {

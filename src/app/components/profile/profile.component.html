@@ -1,68 +1,49 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 <div class="body_wrapper">
-  <div class="container c_body">
-    <div class="row justify-content-center">
-      
-    </div>
-    <div class="row justify-content-center">
-        <div class="col-10">
-          <p class="register_text">Quase lá! Agora vamos criar o seu perfil.</p>
-          <div class="logo_wrapper">
-            <div class="col-12">
-              <img class="logo" src="../../../assets/img/perfil-foto.png">
-            </div>
-          </div>
-          <p class="photo_text">ADICIONAR FOTO</p>
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-              <div class="form-group">
-                  <input type="text" placeholder="NOME COMPLETO*" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
-                  <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                      <div *ngIf="f.username.errors.required">Username is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <input type="password" placeholder="DATA DE NASCIMENTO*" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <input type="password" placeholder="CPF" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <input type="password" placeholder="E-MAIL*" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <input type="password" placeholder="DDD + TELEFONE*" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <input type="password" placeholder="LOCALIZAÇÃO*" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <input type="password" placeholder="SENHA" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-                  <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                      <div *ngIf="f.password.errors.required">Password is required</div>
-                  </div>
-              </div>
-              <!-- <div class="form-group">
-                  <button [disabled]="loading" class="btn btn-primary">Acessar</button>
-                  <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-              </div> -->
-          </form>
+  <div class="container c_header_profile">
+    <i class="fa fa-bars"></i>
+    <img class="text_logo" align="right"src="../../../assets/img/umamaologotopop.png">
+    <div class="row justify-content-center profile_wrapper">
+      <div class="col-12">
+        <img class="profile_image" src="../../../assets/img/foto-usuario1.png">
       </div>
     </div>
-    <div class="row justify-content-center"><div class="col-10 continue_link"><a href="">CONTINUAR</a> <i class="fa fa-arrow-right" aria-hidden="true"></i></div></div>
+  </div>
+  <div class="separation"></div>
+  <div class="container c_body_profile">
+    <div class="row justify-content-center">
+      <p class="profile_name">Letícia Silva</p>
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    </div>
+    <div class="row justify-content-center">
+      <p class="profile_rank">N O V A T O</p>
+    </div>
+    <div class="row justify-content-center">
+      <p class="profile_mention">@ Itú Sabará</p>
+    </div>
+    <div class="row justify-content-center">
+      <button class="profile_add">Adicionar atividade</button>
+    </div>
+    <div class="row justify-content-center">
+      <p class="profile_points">Você tem <strong>3</strong> pontos</p>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-5 profile_helped">
+        <div class="row title justify-content-center">
+          <p>JÁ AJUDOU</p>
+        </div>
+        <div class="row info justify-content-center">
+          <p>2</p><p>x</p>
+        </div>
+      </div>
+      <div class="col-5 profile_helping">
+          <div class="row title justify-content-center">
+           <p>JÁ AJUDARAM</p>
+          </div>
+          <div class="row info justify-content-center">
+           <p>1</p><p>x</p>
+          </div>
+        </div>
+    </div>
   </div>
 </div>
