@@ -1,7 +1,7 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 <div class="body_wrapper">
   <div class="container c_header_profile">
-    <i class="fa fa-bars"></i>
+    <i (click)="toggleMenu()"class="fa fa-bars"></i>
     <img class="text_logo" align="right"src="../../../assets/img/umamaologotopop.png">
     <div class="row justify-content-center profile_wrapper">
       <div class="col-12">
@@ -11,6 +11,11 @@
   </div>
   <div class="separation"></div>
   <div class="container c_body_profile">
+    <div *ngIf="showMenu; else oi">
+      <app-side-bar></app-side-bar>
+    </div>
+    <ng-template #oi>
+    </ng-template>
     <div class="row justify-content-center">
       <p class="profile_name">{{ user.name }}</p>
       <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -49,6 +54,8 @@
       <div class="col-11">
         <p class="profile_help">Preciso de ajuda</p>
       </div>
+      
     </div>
+    <app-postagens-profile></app-postagens-profile>
   </div>
 </div>

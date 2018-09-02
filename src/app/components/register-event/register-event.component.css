@@ -1,82 +1,91 @@
+
 body {
     overflow: hidden;
 }
-
+.border{
+    color: #ff5370, #f15f22;
+}
+#field{
+    width: 30px;
+    
+    color: #ff5370, #f15f22;
+}
 .body_wrapper {
     min-height: 100%;
     min-width: 100%;
-    background: linear-gradient(90deg, #ff5370, #f15f22);
+    background: linear-gradient(90deg, white);
 }
-
 p, button {
     font-family: 'Nunito', sans-serif;
 }
-
+#height{
+    height: 150px;
+}
 .logo {
-    max-width: 60%;
+    margin-top: 25px;
+    border:1px solid #f15f22;
+    max-width: 40%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
 }
-
 .logo_wrapper {
     display: flex;
     justify-content: center;
 }
-
 .form-control {
     height: 2.0rem;
 }
-
 .c_body {
     max-height: 20%;
 }
-
 .register_text {
     font-size: 14px;
-    color: white;
+    color: #ff5370, #f15f22;
     text-align: center;
     margin-bottom: 0.5rem;
     margin-top: 2.0rem;
 }
-
+#submit{
+    background-color: #f15f22;
+}
 .form-group {
     display: flex;
     justify-content: center;
     margin-bottom: 0.5rem;
 }
-
+.titulos_inputs{
+    color: #ff5370;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .form-group:first-child {
     margin-top: 2.5rem;
 }
-
 .form-group input {
     background: transparent;
-    border: 1.5px solid white;
+    border: 1.5px solid  #f15f22;
     border-radius: 9px;
     height: 2.3rem;
 }
-
 ::-webkit-input-placeholder, .photo_text  {
-    color: white;
+    color:  #f15f22;
     font-size: 13px;
     font-style: italic;
   }
-
   .photo_text {
       font-style: normal;
       text-align: center;
       margin-bottom: 1.9rem;
+      color: #f15f22;
   }
-
-
   .continue_link {
     display: flex;
     justify-content: center;
     margin-bottom: 0.3rem;
     margin-top: 1.2rem;
   }
-
   .continue_link button{
       color: #1d2633;
       font-weight: bold;
@@ -84,20 +93,10 @@ p, button {
       background:none;
       border: none;
     }
-
 .fa-arrow-right {
     font-size: 1.7rem;
     font-weight: 100;
     padding-top: 0.1rem;
     padding-left: 0.4rem;
 }
-
-.fa-chevron-left {
-    margin-left: 0rem;
-    color: #6b6769;
-    font-size: 1.5rem;
-    padding: 5px;
-    padding-top: 1.0rem;
-    height: 2.0rem;
-}
-  
+  /*  */

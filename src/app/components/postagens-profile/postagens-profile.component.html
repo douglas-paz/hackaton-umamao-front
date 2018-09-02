@@ -1,0 +1,16 @@
+<div class="font_nunito col-11">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,800" rel="stylesheet">
+    <div *ngFor="let postagem of postagens" >
+      <div class="row">
+        <div class="col-6">
+          <img class="card-img-top" [src]="postagem.photo">
+        </div>
+        <div class="col-6 second">
+          <h2 class="h2_nunito">{{postagem.title}}</h2>
+          <p>{{postagem.description}}</p>
+          <a href="/postagem/id?={{postagem.post_id}}" class="btn btn_ajudar">{{textoAcao}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  

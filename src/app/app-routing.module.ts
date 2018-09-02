@@ -1,3 +1,4 @@
+import { RegisterEventComponent } from './components/register-event/register-event.component';
 import { AuthService } from './auth/auth.service';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
@@ -9,6 +10,7 @@ import { AuthGuardService } from './auth/auth-guard.service';
 import { PostagensComponent } from './components/postagens/postagens.component';
 import { SideBarComponent } from './modules/shared/side-bar/side-bar.component';
 import { SolicitationComponent } from './components/solicitation/solicitation.component';
+import { AuthLoggedService } from './auth/auth-logged.service';
 
 const routes: Routes = [
   {
@@ -16,10 +18,13 @@ const routes: Routes = [
   },
   {
     path: 'signup' , 
-    component : RegisterComponent
+    component : RegisterComponent,
+    canActivate: [AuthLoggedService]
   },
   {
-    path: 'login', component: LoginComponent
+    path: 'login', 
+    component: LoginComponent,
+    canActivate: [AuthLoggedService]
   },
   {
     path: 'profile',
@@ -38,6 +43,10 @@ const routes: Routes = [
     component: SolicitationComponent
   },
   {
+    path: 'event',
+    component: RegisterEventComponent
+  },
+  {
     path: '**',
     redirectTo: ''
   }
@@ -46,6 +55,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [ RouterModule ],
-  providers: [ AuthGuardService, AuthService ]
+  providers: [ AuthGuardService, AuthService, AuthLoggedService ]
 })
 export class AppRoutingModule { }

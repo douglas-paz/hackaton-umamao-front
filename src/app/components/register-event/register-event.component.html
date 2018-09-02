@@ -1,0 +1,77 @@
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<div class="body_wrapper">
+  <div class="container c_body">
+    <div class="row justify-content-center">
+        <div class="col-10">
+          <div class="logo_wrapper">
+            <div class="col-12">
+              <img class="logo" src="../../../assets/img/perfil-foto.png">
+            </div>
+          </div>
+          <p class="photo_text">ADICIONAR FOTO</p>
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <div class="form-group">
+                  <input type="text" placeholder="NOME DA ATIVIDADE*" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                  <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <div *ngIf="f.name.errors.required"></div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <p>OBJETIVO</p>
+                  <div>
+                    <input type="checkbox" id="helped" name="feature" value="helped" checked />
+                    <label for="helped">Quero uma mão</label>
+                  </div><br>
+                  <div>
+                    <input type="checkbox" id="helping" name="feature" value="helping" checked />
+                    <label for="helping">Dar uma mão</label>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <p>CATEGORIA</p>
+                  <div>
+                    <input type="checkbox" id="helped" name="feature" value="helped" checked />
+                    <label for="lonely">INDIVIDUAL</label>
+                  </div><br>
+                  <div>
+                    <input type="checkbox" id="helping" name="feature" value="helping" checked />
+                    <label for="group">COLETIVO</label>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <input id="height" type="textarea" placeholder="DESCRIÇÃO" formControlName="description" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.description.errors }" />
+                  <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+                      <div *ngIf="f.description.errors.required"></div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="titulos_inputs">DATA</label>
+                  <input type="date" placeholder="DATA" formControlName="data" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.data.errors }" />
+                  <div *ngIf="submitted && f.data.errors" class="invalid-feedback">
+                      <div *ngIf="f.data.errors.required"></div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="titulos_inputs">HORÁRIO</label>
+                  <input type="time" placeholder="HORÁRIO*" formControlName="hours" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.hours.errors }" />
+                  <div *ngIf="submitted && f.hours.errors" class="invalid-feedback">
+                      <div *ngIf="f.hours.errors.required"></div>
+                  </div>
+              </div>
+              <div class="form-group">
+                    <input type="number" placeholder="NÚMERO DE PARTICIPANTES" formControlName="contribuidores" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.contribuidores.errors }" />
+                    <div *ngIf="submitted && f.contribuidores.errors" class="invalid-feedback">
+                        <div *ngIf="f.contribuidores.errors.required"></div>
+                    </div>
+                </div>
+              
+              <div class="form-group">
+                <input type="submit" id="submit" value="enviar">
+                
+              </div>
+          </form>
+      </div>
+    </div>
+    
+  </div>
+</div>

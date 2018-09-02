@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideBarComponent implements OnInit {
   menu: Object;
+  showMenu = false;
   constructor() { }
 
   ngOnInit() {
@@ -37,6 +38,10 @@ export class SideBarComponent implements OnInit {
         icon:"../../../../assets/img/calendario.png"
       }
     ]
+  }
+
+  toggleMenu() {
+    document.getElementById('side-menu').style.display = 'none'
   }
 
 }

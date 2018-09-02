@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { User } from '../../models/User.model';
 
 @Component({
@@ -8,11 +8,16 @@ import { User } from '../../models/User.model';
 })
 export class ProfileComponent implements OnInit {
   user: User;
-
+  showMenu = false;
   constructor() { }
 
   ngOnInit() {
     this.user = JSON.parse(localStorage.getItem('currentUser'));
+  }
+
+  toggleMenu() {
+    console.log(this.showMenu);
+    this.showMenu = !this.showMenu;
   }
 
 }
