@@ -1,0 +1,19 @@
+{
+  "postagens": [
+    {
+      "conclusion_status": false,
+      "date": "01/09/2018",
+      "local": "Sicredi Digital",
+      "title": "Hackatona social",
+      "description": "MaMão bombando",
+      "photo": "../assets/img/postagem1.jpg",
+      "post_id": 1
+    }
+  ],
+  "users": [
+    {
+      "username" : "leonardo",
+      "password" : "leoleo"
+    }
+  ]
+}

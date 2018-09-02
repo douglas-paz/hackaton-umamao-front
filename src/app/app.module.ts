@@ -6,9 +6,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { LayoutModule } from './modules/layout/layout.module';
 import { RegisterComponent } from './components/register/register.component';
-import { HomeComponent } from './componentes/home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './components/profile/profile.component';
+import { PostagensComponent } from './components/postagens/postagens.component';
+import {HttpModule} from '@angular/http';
 
 import { AuthGuardService as AuthGuard } from './auth/auth-guard.service';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
@@ -27,7 +29,8 @@ const JWT_Module_Options: JwtModuleOptions = {
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    PostagensComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ const JWT_Module_Options: JwtModuleOptions = {
     LayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    JwtModule.forRoot(JWT_Module_Options)
+    JwtModule.forRoot(JWT_Module_Options),
+    HttpModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
