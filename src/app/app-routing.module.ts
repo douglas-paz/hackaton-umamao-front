@@ -13,23 +13,23 @@ const routes: Routes = [
     path: '' , component: HomeComponent,
   },
   {
-    path: 'register' , 
+    path: 'register' ,
     component : RegisterComponent
   },
   {
     path: 'login', component: LoginComponent
   },
   {
-    path: 'profile', 
+    path: 'profile',
     component: ProfileComponent,
     canActivate: [AuthGuardService]
   },
   {
-    path: '**',
-    redirectTo: ''
+    path: 'postagens', component: PostagensComponent
   },
   {
-    path: 'postagens', component: PostagensComponent
+    path: '**',
+    redirectTo: ''
   }
 ];
 

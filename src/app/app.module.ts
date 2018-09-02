@@ -14,6 +14,7 @@ import {HttpModule} from '@angular/http';
 
 import { AuthGuardService as AuthGuard } from './auth/auth-guard.service';
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 const JWT_Module_Options: JwtModuleOptions = {
   config: {
@@ -30,7 +31,8 @@ const JWT_Module_Options: JwtModuleOptions = {
     RegisterComponent,
     HomeComponent,
     ProfileComponent,
-    PostagensComponent
+    PostagensComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

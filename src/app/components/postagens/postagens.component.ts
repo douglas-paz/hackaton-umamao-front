@@ -12,6 +12,7 @@ export class PostagensComponent implements OnInit {
 
   public postagens: Array<Postagem>;
   public textoAcao = 'Dar uma mão';
+  public tipoAcao = 'AJUDAR';
 
   constructor(
     private postagemServices: PostagemService
