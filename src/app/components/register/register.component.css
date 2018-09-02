@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .body_wrapper {
     min-height: 100%;
     min-width: 100%;
@@ -25,7 +29,7 @@ p, button {
 }
 
 .c_body {
-    height: 100%;
+    max-height: 20%;
 }
 
 .register_text {
@@ -43,7 +47,7 @@ p, button {
 }
 
 .form-group:first-child {
-    margin-top: 4.5rem;
+    margin-top: 2.5rem;
 }
 
 .form-group input {
@@ -70,7 +74,7 @@ p, button {
     display: flex;
     justify-content: center;
     margin-bottom: 0.3rem;
-    margin-top: 2.8rem;
+    margin-top: 1.2rem;
   }
 
   .continue_link a{
