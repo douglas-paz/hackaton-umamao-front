@@ -3,15 +3,15 @@
     <app-side-bar></app-side-bar>
     <img class="text_logo" align="right"src="../../../assets/img/umamaologotopop.png" alt="Logo Uma Mão">
   </div>
-  <div class="row justify-content-center profile_wrapper">
+  <div class="row justify-content-center profile_wrapper" (click)="toggleSidenav()">
     <div class="col-12">
       <img class="profile_image" src="../../../assets/img/foto-usuario1.png" alt="Imagem do Perfil">
     </div>
   </div>
-  <div class="separation"></div>
-  <div class="container c_body_profile">
+  <div class="separation" (click)="toggleSidenav()"></div>
+  <div class="container c_body_profile" (click)="toggleSidenav()">
     <div *ngIf="showMenu; else oi">
-      <app-side-bar></app-side-bar>
+      <app-side-bar #sidenav ></app-side-bar>
     </div>
     <ng-template #oi>
     </ng-template>

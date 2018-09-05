@@ -1,6 +1,6 @@
+import { MatSidenav } from '@angular/material';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import {  MatSidenavContainer } from '@angular/material';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -9,11 +9,11 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./side-bar.component.css'],
 })
 export class SideBarComponent implements OnInit {
+  @ViewChild('sidenav') public sidenav: MatSidenav;
   mode = new FormControl('over');
   menu: Object;
-  showMenu = false;
   constructor(
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -46,9 +46,6 @@ export class SideBarComponent implements OnInit {
     ]
   }
 
-  toggleMenu() {
-    document.getElementById('side-menu').style.display = 'none'
-  }
 
   logout() {
     localStorage.removeItem('currentUser');

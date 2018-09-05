@@ -1,5 +1,5 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav [mode]="mode.value">
+<mat-sidenav-container >
+  <mat-sidenav #sidenav [mode]="over">
       <mat-radio-group class="activated" [formControl]="mode">
         <p>
           <label><i (click)="sidenav.toggle()" class="engrenagem fa fa-cog" aria-hidden="true"></i></label>
@@ -10,7 +10,7 @@
                 
               </div>
               <div class="row justify-content-center">
-                <img routerLink="['/perfil']" class="profile_image" src="../../../../assets/img/foto-menuhamburguer.png">
+                <img routerLink="/perfil" class="profile_image" src="../../../../assets/img/foto-menuhamburguer.png">
               </div>
               <div class="row justify-content-center">
                   <p class="profile_name">Letícia Silva</p>
@@ -41,12 +41,13 @@
                     </div>
                   </div>
                 </div>
-            </div>
+          </div>
       </mat-radio-group>
   </mat-sidenav>
 
   <mat-sidenav-content class="header">
-    <p><label><i (click)="sidenav.toggle()"class="fa fa-bars hidden"></i></label>
+    <p>
+      <label><i (click)="sidenav.toggle()"class="fa fa-bars hidden"></i></label>
       <img class="text_logo" align="right"src="../../../assets/img/umamaologotopop.png" alt="Logo Texto Uma Mão">
     </p>
   </mat-sidenav-content>

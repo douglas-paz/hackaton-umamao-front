@@ -1,8 +1,8 @@
 import { DataService } from './../../services/data.service';
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { User } from '../../models/User.model';
-import { MatMenuTrigger } from '@angular/material';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { SideBarComponent } from '../../modules/shared/side-bar/side-bar.component';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +10,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  // @ViewChild(MatMenuTrigger) trigger: trigger;
+  @ViewChild(SideBarComponent) sidnavComponent: SideBarComponent;
   mode = new FormControl('over');
   user: User;
   showMenu = false;
@@ -32,15 +32,16 @@ export class ProfileComponent implements OnInit {
 
   get f() { return this.nameForm.controls; }
 
-  toggleMenu() {
-    this.showMenu = !this.showMenu;
-  }
-
   toggleChangeName() {
     this.changingName = !this.changingName;
   }
 
-  private onSubmit(): void {
+  toggleSidenav() {
+    if (this.sidnavComponent.sidenav.opened)
+      this.sidnavComponent.sidenav.toggle();
+  }
+
+  public onSubmit(): void {
     this.submitted = true;
 
     if (this.nameForm.invalid)

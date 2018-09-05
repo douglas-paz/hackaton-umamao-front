@@ -16,7 +16,7 @@ p, button {
 
 .c_header_profile {
     background: linear-gradient(90deg, #ff5370, #f15f22);
-    height: 6rem;
+    height: 7rem;
     padding-right: 0;
 }
 
@@ -41,9 +41,8 @@ p, button {
     margin-left: auto;
     margin-right: auto;
     position: absolute;
-    top: 6rem;  
+    top: 7rem;  
     left: 50%;
-
     transform: translate(-50%, -50%);
 }
 
@@ -67,7 +66,8 @@ p, button {
     letter-spacing: 0.02rem;
     font-size: 0.8rem;
     font-weight: 1000;
-    height: 0.2rem;
+    /* height: 1.0rem; */
+    margin-top: 0.4rem;
 }
 
 .profile_mention {
@@ -75,7 +75,7 @@ p, button {
     letter-spacing: 0.02rem;
     font-size: 0.8rem;
     font-weight: 1000;
-    height: 0.2rem;
+    margin-top: 1.0vh;
 }
 
 .profile_add {
@@ -83,10 +83,9 @@ p, button {
     color: white;
     border-radius: 4px;
     border: 1px solid #1d2633;
-    font-size: 0.8rem;
-    padding-left: 0.6rem;
-    padding-right: 0.6rem;
-    margin-top: 0.6rem;
+    font-size: 1.0rem;
+    padding: 1.1vh 1.8vw;
+    margin-top: 2.6vh;
 }
 
 .profile_points {
@@ -170,8 +169,7 @@ app-side-bar {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
-    height: 100%;
+    z-index: 1;
 }
 
 .form-group_user {

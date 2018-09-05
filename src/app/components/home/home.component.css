@@ -6,9 +6,17 @@
 }
 
 .logo {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+b {
+  font-weight: bold;
+}
+
 p, button {
   font-family: 'Nunito', sans-serif;
   text-align: center;
@@ -16,9 +24,15 @@ p, button {
   font-weight: initial;
 }
 
+.text p {
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
 .body_wrapper{
   background: linear-gradient(90deg, #ff5370, #f15f22);
-  min-height: 100%;
+  max-height: 115vh;
+  min-height: 100vh;
   min-width: 100%;
 }
 
@@ -66,10 +80,6 @@ p, button {
   margin-top: 3.0rem;
 }
 
-.margin_top{
-  margin-top: 3.0rem;
-}
-
 .not_register p {
   color: white;
   font-size: 12px;
@@ -88,8 +98,4 @@ p, button {
   border-bottom: 1.5px solid #1d2633;
   font-weight: bold;
   font-size: 16px;
-}
-
-.btn {
-  /* font-weight: bold; */
 }
