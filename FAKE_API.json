@@ -51,7 +51,10 @@
   "profile": [
     {
       "username" : "leonardo",
-      "password" : "leoleo"
+      "password" : "leoleo",
+      "name" : "Leonardo Vianna",
+      "rank" : "N O V A T O",
+      "neighborhood" : "Cristal"
     }
   ]
 }

@@ -50,7 +50,7 @@ export class RegisterComponent implements OnInit {
       .subscribe(
         data => {
           localStorage.setItem('currentUser', JSON.stringify(this.registerForm.value));
-          this.router.navigate(['/profile']);
+          this.router.navigate(['/perfil']);
         },
         error => {
           console.log(error);

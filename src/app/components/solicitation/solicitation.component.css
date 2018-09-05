@@ -15,11 +15,6 @@ p, button, a {
     padding-top: 0.5rem;
 }
 
-.c_header_profile {
-    background: linear-gradient(90deg, #ff5370, #f15f22);
-    height: 8%;
-    padding-right: 0;
-}
 
 .fa-bars {
     font-size: 2rem;
@@ -44,9 +39,8 @@ p, button, a {
 }
 
 .main_photo {
-    min-width: 96%;
-    max-width: 96%;
-    height: 16.5rem;
+    width: 100vw;
+    height: 45vh;
     margin-top: 0.7rem;
 }
 
@@ -107,12 +101,4 @@ app-pop-up {
     left: 12%;
     width: 75%;
     height: 30%;
-}
-
-app-side-bar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    height: 100%;
 }

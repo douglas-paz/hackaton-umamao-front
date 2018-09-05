@@ -1,12 +1,11 @@
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 <div class="body_wrapper">
   <div class="container c_header_profile">
-    <i (click)="toggleMenu()"class="fa fa-bars"></i>
-    <img class="text_logo" align="right"src="../../../assets/img/umamaologotopop.png">
-    <div class="row justify-content-center profile_wrapper">
-      <div class="col-12">
-        <img class="profile_image" src="../../../assets/img/foto-usuario1.png">
-      </div>
+    <app-side-bar></app-side-bar>
+    <img class="text_logo" align="right"src="../../../assets/img/umamaologotopop.png" alt="Logo Uma Mão">
+  </div>
+  <div class="row justify-content-center profile_wrapper">
+    <div class="col-12">
+      <img class="profile_image" src="../../../assets/img/foto-usuario1.png" alt="Imagem do Perfil">
     </div>
   </div>
   <div class="separation"></div>
@@ -17,14 +16,32 @@
     <ng-template #oi>
     </ng-template>
     <div class="row justify-content-center">
-      <p class="profile_name">{{ user.name }}</p>
-      <i class="fa fa-pencil" aria-hidden="true"></i>
+      <div *ngIf="!changingName; else changeNameBlock">
+        <div class="row justify-content-center">
+          <p class="profile_name">Leonardo</p>
+          <i class="fa fa-pencil" (click)="toggleChangeName()" aria-hidden="true"></i>
+        </div>
+      </div>
+      <ng-template #changeNameBlock>
+          <form [formGroup]="nameForm" #formDirective="ngForm" (ngSubmit)="onSubmit()">
+              <div class="row justify-content-center">
+                <div class="form-group form-group_user">
+                    <input type="text" placeholder="Leonardo" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">Name is required</div>
+                    </div>
+                    <button [disabled]="loading" (click)="toggleChangeName()" class="btn btn-primary"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                    <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" alt="Carregando"/>
+                </div>
+              </div>
+          </form>
+      </ng-template>
     </div>
     <div class="row justify-content-center">
       <p class="profile_rank">N O V A T O</p>
     </div>
     <div class="row justify-content-center">
-      <p class="profile_mention">@ {{ user.neighborhood }}</p>
+      <p class="profile_mention">@ Cristal</p>
     </div>
     <div class="row justify-content-center">
       <button class="profile_add">Adicionar atividade</button>

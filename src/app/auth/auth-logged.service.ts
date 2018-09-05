@@ -11,7 +11,7 @@ export class AuthLoggedService implements CanActivate {
 
   canActivate(): boolean {
     if (localStorage.getItem('currentUser')) {
-      this.router.navigate(['profile']);
+      this.router.navigate(['perfil']);
       return false;
     }
     return true;

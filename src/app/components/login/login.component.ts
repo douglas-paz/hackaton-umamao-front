@@ -1,3 +1,4 @@
+import { routerTransition } from './../../router.animations';
 import { first } from 'rxjs/operators';
 import { DataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
@@ -6,6 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
+  animations: [ routerTransition ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
@@ -31,7 +33,7 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
 
-  private onSubmit(): void {
+  public onSubmit(): void {
     this.submitted = true;
 
     if (this.loginForm.invalid)
@@ -44,7 +46,7 @@ export class LoginComponent implements OnInit {
       .subscribe(resp => {
         this.user = resp;
         if (resp) {
-          this.router.navigate(['profile']);
+          this.router.navigate(['perfil']);
           localStorage.setItem('currentUser', JSON.stringify(resp));
         }
         else {
@@ -58,6 +60,10 @@ export class LoginComponent implements OnInit {
         this.loading = false;
         this.submitted = false;
       });
+  }
+
+  getState(outlet) {
+    return outlet.activatedRouteData.state;
   }
 
 }

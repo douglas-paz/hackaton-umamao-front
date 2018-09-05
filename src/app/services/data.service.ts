@@ -16,7 +16,7 @@ export class DataService {
   constructor(private httpClient: HttpClient) { }
 
   public getUser(username: string, password: string) {
-    return this.httpClient.get(`${environment.API_URL}/profile/${username}/`);
+    return this.httpClient.get(`${environment.API_URL}/profile?username=${username}/`);
   }
 
   public signup(user: User) {
@@ -27,5 +27,9 @@ export class DataService {
     this.headers.append('Access-Control-Max-Age', '1728000');
 
     return this.httpClient.post(`${environment.API_URL}/profile/`, user);
+  }
+
+  public changeName() {
+    
   }
 }

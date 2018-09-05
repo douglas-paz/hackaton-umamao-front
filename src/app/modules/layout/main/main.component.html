@@ -1,6 +1,3 @@
-<!-- <app-header></app-header> -->
-<!-- <main class="main__container"> -->
-  <!-- <div class="main-container__bg" [ngClass]="{'main-container__bg-dark': darkModeActive}"></div> -->
-  <router-outlet></router-outlet>
-<!-- </main> -->
-<!-- <app-footer></app-footer> -->
+<main class="" [@routerAnimation]="getRouteAnimation(appOutlet)">
+  <router-outlet #appOutlet="outlet"></router-outlet>
+</main>

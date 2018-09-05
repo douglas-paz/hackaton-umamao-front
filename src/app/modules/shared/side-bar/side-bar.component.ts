@@ -1,12 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import {  MatSidenavContainer } from '@angular/material';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-side-bar',
   templateUrl: './side-bar.component.html',
-  styleUrls: ['./side-bar.component.css']
+  styleUrls: ['./side-bar.component.css'],
 })
 export class SideBarComponent implements OnInit {
+  mode = new FormControl('over');
   menu: Object;
   showMenu = false;
   constructor(

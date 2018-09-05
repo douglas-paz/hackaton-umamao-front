@@ -16,40 +16,52 @@ import {ParceirosComponent} from './components/parceiros/parceiros.component';
 
 const routes: Routes = [
   {
-    path: '' , component: HomeComponent,
+    path: '' , 
+    component: HomeComponent,
+    data: { animation: 'home'}
   },
   {
     path: 'signup' , 
     component : RegisterComponent,
-    canActivate: [AuthLoggedService]
+    canActivate: [AuthLoggedService],
+    data: { animation: 'signup'}
   },
   {
     path: 'login', 
     component: LoginComponent,
-    canActivate: [AuthLoggedService]
+    canActivate: [AuthLoggedService],
+    data: { animation: 'login'}
   },
   {
-    path: 'profile',
+    path: 'perfil',
     component: ProfileComponent,
-    canActivate: [AuthGuardService]
+    canActivate: [AuthGuardService],
+    data: { animation: 'perfil'}
   },
   {
-    path: 'postagens', component: PostagensProfileComponent
+    path: 'postagens', 
+    component: PostagensProfileComponent,
+    data: { animation: 'postagens'}
   },
   {
-    path: 'parceiros', component: ParceirosComponent
+    path: 'parceiros', 
+    component: ParceirosComponent,
+    data: { animation: 'parceiros'}
   },
   {
     path: 'menu',
-    component: SideBarComponent
+    component: SideBarComponent,
+    data: { animation: 'menu'}
   },
   {
     path: 'solicitation',
-    component: SolicitationComponent
+    component: SolicitationComponent,
+    data: { animation: 'solicitation'}
   },
   {
     path: '**',
-    redirectTo: ''
+    redirectTo: '',
+    data: { animation: '*'}
   }
 ];
 
